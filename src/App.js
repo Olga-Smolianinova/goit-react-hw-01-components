@@ -1,26 +1,32 @@
-// App.js - главный компонент (обертка) создаваемого приложения;
+gs; // App.js - главный компонент (обертка) создаваемого приложения;
 // Компоненты обязательно называются с большой буквы. В одном файл - прописываем работу только одного компонента;
 // компонент - это функция, куда мы закидываем настроийки, а на выходе получаем Virtual DOM, который потом рендерится в настоящий DOM.
 
-import React from "react"; //обзятельно import React  в каждый файл, чтобы использовать JSX и он мог  скомпилироваться и транспайлиться
+import React from 'react'; //обзятельно import React  в каждый файл, чтобы использовать JSX и он мог  скомпилироваться и транспайлиться
 
 // 1. Profile
-import Profile from "./components/Profile/Profile"; //import Profile из Profile.js для вставки части кода
+import Profile from './components/Profile/Profile'; //import Profile из Profile.js для вставки части кода
 
-import userData from "./datadase/user.json"; //database of user
+import userData from './datadase/user.json'; //database of user
 // console.log(userData);
 
 //2. Statistics
-import Statistics from "./components/Statistics/Statistics";
+import Statistics from './components/Statistics/Statistics';
 
-import statisticalData from "./datadase/statistical-data.json";
+import statisticalData from './datadase/statistical-data.json';
 // console.log(statisticalData);
 
 //3. FriendList
-import FriendList from "./components/FriendList/FriendList";
+import FriendList from './components/FriendList/FriendList';
 
-import friendsData from "./datadase/friends.json";
-console.log(friendsData);
+import friendsData from './datadase/friends.json';
+// console.log(friendsData);
+
+// 4. TransactionHistory
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+
+import transactions from './datadase/transactions.json';
+console.log(transactions);
 
 const App = () => {
   return (
@@ -41,6 +47,9 @@ const App = () => {
       <Statistics stats={statisticalData} />
       {/* 3.  рендерим и вставляем часть кода из components/FriendList/FriendList.js */}
       <FriendList friendsData={friendsData} />
+
+      {/* 4.  рендерим и вставляем часть кода из components/TransactionHistory/TransactionHistory.js */}
+      <TransactionHistory items={transactions} />
     </div>
   );
 };

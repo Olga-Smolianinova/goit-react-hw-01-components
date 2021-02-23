@@ -3,7 +3,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import defaultImg from "../default.jpg"; //картинка для default
-console.log(defaultImg);
 
 const FriendList = ({ friendsData }) => (
   <section className="friends">
@@ -34,7 +33,7 @@ FriendList.propTypes = {
       name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
     })
-  ),
+  ).isRequired,
 };
 
 export default FriendList;
