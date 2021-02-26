@@ -14,19 +14,16 @@ import userData from './datadase/user.json'; //database of user
 import Statistics from './components/Statistics/Statistics';
 
 import statisticalData from './datadase/statistical-data.json';
-// console.log(statisticalData);
 
 //3. FriendList
 import FriendList from './components/FriendList/FriendList';
 
 import friendsData from './datadase/friends.json';
-// console.log(friendsData);
 
 // 4. TransactionHistory
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 
 import transactions from './datadase/transactions.json';
-console.log(transactions);
 
 const App = () => {
   return (
@@ -43,8 +40,8 @@ const App = () => {
         likes={userData.stats.likes}
       />
       {/* 2. рендерим и вставляем часть кода из components/Statistics/Statistics.js */}
-      {/* <Statistics title="Upload stats" stats={statisticalData} /> */}
-      <Statistics stats={statisticalData} />
+      <Statistics title="Upload stats" stats={statisticalData} />
+      {/* <Statistics stats={statisticalData} /> */}
       {/* 3.  рендерим и вставляем часть кода из components/FriendList/FriendList.js */}
       <FriendList friendsData={friendsData} />
 

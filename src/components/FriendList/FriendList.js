@@ -1,28 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import defaultImg from "../default.jpg"; //картинка для default
+import FriendListItem from './FriendListItem/FriendListItem';
+
+import s from './FriendList.module.css'; //підключення стилей
 
 const FriendList = ({ friendsData }) => (
-  <section className="friends">
-    <h2 className="title">Friends</h2>
-    <ul className="fiends-list">
+  <section className="section">
+    <h2 className={s.title}>Friends</h2>
+    <ul className={s.friends__list}>
       {friendsData.map(({ id, avatar, name, isOnline }) => (
-        <li key={id} className="item">
-          <span className="status">{isOnline}</span>
-          <img className="avatar" src={avatar} alt={name} width="48" />
-          <p className="name">{name}</p>
+        <li key={id} className={s.item}>
+          <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
         </li>
       ))}
     </ul>
   </section>
 );
-
-// для описания свойств по default
-FriendList.defaultProps = {
-  avatar: defaultImg,
-};
 
 // для описания propTypes, для каждого компонента где есть props. Описание всех props, которые указали в параметрах или шаблоне
 FriendList.propTypes = {
@@ -30,9 +25,7 @@ FriendList.propTypes = {
     PropTypes.shape({
       avatar: PropTypes.string,
       id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      isOnline: PropTypes.bool.isRequired,
-    })
+    }),
   ).isRequired,
 };
 

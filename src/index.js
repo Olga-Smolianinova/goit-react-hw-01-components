@@ -6,6 +6,8 @@ import App from './App'; //import функции App из  App.js - главно
 
 import 'modern-normalize/modern-normalize.css'; //подключение стилей для normalize
 
+import styles from './styles.css';
+
 // рендерим код из Аpp.js - главного компонента (обертки) создаваемого приложения;
 // ReactDOM.render(<App />, document.getElementById("root"));
 // но лучше использовать нижеследующую запись, т.к. React.StrictMode (строгий режим), т.к. это инструмент для обнаружения потенциальных проблем в приложении. Строгий режим активирует доп.проверки и предупреждения для своих потомков.

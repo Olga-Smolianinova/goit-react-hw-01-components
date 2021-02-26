@@ -1,16 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-const Statistics = ({ stats }) => (
-  // console.log(stats);
-  <section className="statistics">
-    <h2 className="title">Upload stats</h2>
-    <ul className="stat-list">
-      {stats.map(({ id, label, percentage }) => (
-        <li key={id} className="item">
-          <span className="label">{label}</span>
-          <span className="percentage"> {percentage}%</span>
+import s from './Statistics.module.css'; //підключення стилей
+
+const Statistics = ({ title, stats }) => (
+  <section className="section">
+    <h2 className={s.title}>{title}</h2>
+    <ul className={s.statList}>
+      {stats.map(({ id, label, percentage, color }) => (
+        <li key={id} className={s.item} style={{ backgroundColor: color }}>
+          <span className={s.label}>{label}</span>
+          <span className={s.percentage}> {percentage}%</span>
         </li>
       ))}
     </ul>
@@ -24,7 +25,7 @@ Statistics.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    })
+    }),
   ).isRequired,
 };
 

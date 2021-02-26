@@ -1,0 +1,9 @@
+@value backgroundColor from '../../variables.module.css';
+
+.title {
+  text-transform: uppercase;
+  background-color: #83d9e5;
+}
+.item:nth-child(2n) {
+  background-color: backgroundColor;
+}

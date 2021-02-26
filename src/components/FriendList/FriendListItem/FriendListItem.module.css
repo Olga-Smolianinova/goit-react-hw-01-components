@@ -1,0 +1,26 @@
+@value backgroundColor from '../../../variables.module.css';
+
+.status {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+}
+.online {
+  composes: status;
+  background-color: #83e588;
+}
+.offline {
+  composes: status;
+  background-color: #e58393;
+}
+.avatar {
+  display: block;
+  border-radius: 20%;
+  background-color: backgroundColor;
+}
+.name {
+  padding-left: 10px;
+  color: #7a7b77;
+}

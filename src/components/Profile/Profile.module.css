@@ -1,7 +1,43 @@
-li {
-  list-style: none;
+@value backgroundColor from '../../variables.module.css';
+
+.description {
+  padding: 20px 0;
+
+  background-color: #ffffff;
 }
-.profile {
-  text-align: center;
-  background-color: aqua;
+.avatar {
+  border-radius: 50%;
+  background-color: backgroundColor;
+}
+.name {
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 26px;
+}
+.tag {
+  color: #7a7b77;
+  margin-bottom: 15px;
+}
+.location {
+  color: #7a7b77;
+}
+
+/* ul */
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+
+  padding: 20px 0;
+
+  background-color: #e0f6b6;
+  border-top: 1px solid #7a7b77;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+}
+.quantity {
+  font-weight: 700;
 }

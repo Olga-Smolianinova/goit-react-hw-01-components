@@ -1,0 +1,25 @@
+body {
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  padding: 20px;
+
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style: none;
+}
+.section {
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+
+  outline: 1px solid #7a7b77;
+}

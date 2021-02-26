@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+
+import s from './TransactionHistory.module.css'; //підключення стилей
 
 const TransactionHistory = ({ items }) => (
-  <table className="transaction-history">
+  <table className="section">
     <thead>
-      <tr>
+      <tr className={s.title}>
         <th>Type</th>
         <th>Amount</th>
         <th>Currency</th>
@@ -14,7 +16,7 @@ const TransactionHistory = ({ items }) => (
 
     <tbody>
       {items.map(({ id, type, amount, currency }) => (
-        <tr key={id}>
+        <tr className={s.item} key={id}>
           <td>{type}</td>
           <td> {amount}</td>
           <td> {currency}</td>
@@ -32,7 +34,7 @@ TransactionHistory.propTypes = {
       type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
 };
 
