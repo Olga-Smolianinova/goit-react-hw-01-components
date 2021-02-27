@@ -6,7 +6,8 @@ import s from './Statistics.module.css'; //підключення стилей
 
 const Statistics = ({ title, stats }) => (
   <section className="section">
-    <h2 className={s.title}>{title}</h2>
+    {title && <h2 className={s.title}>{title}</h2>}
+
     <ul className={s.statList}>
       {stats.map(({ id, label, percentage, color }) => (
         <li key={id} className={s.item} style={{ backgroundColor: color }}>
@@ -20,6 +21,7 @@ const Statistics = ({ title, stats }) => (
 
 // для описания propTypes, для каждого компонента где есть props. Описание всех props, которые указали в параметрах или шаблоне
 Statistics.propTypes = {
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

@@ -11,9 +11,12 @@ const FriendList = ({ friendsData }) => (
     <h2 className={s.title}>Friends</h2>
     <ul className={s.friends__list}>
       {friendsData.map(({ id, avatar, name, isOnline }) => (
-        <li key={id} className={s.item}>
-          <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
-        </li>
+        <FriendListItem
+          key={id}
+          avatar={avatar}
+          name={name}
+          isOnline={isOnline}
+        />
       ))}
     </ul>
   </section>

@@ -4,26 +4,27 @@
 
 import React from 'react'; //обзятельно import React  в каждый файл, чтобы использовать JSX и он мог  скомпилироваться и транспайлиться
 
+// Components
 // 1. Profile
-import Profile from './components/Profile/Profile'; //import Profile из Profile.js для вставки части кода
-
-import userData from './datadase/user.json'; //database of user
-// console.log(userData);
+import Profile from './components/Profile/Profile';
 
 //2. Statistics
 import Statistics from './components/Statistics/Statistics';
 
-import statisticalData from './datadase/statistical-data.json';
-
 //3. FriendList
 import FriendList from './components/FriendList/FriendList';
-
-import friendsData from './datadase/friends.json';
 
 // 4. TransactionHistory
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 
-import transactions from './datadase/transactions.json';
+// Styles
+import userData from './datadase/user.json'; //database for user
+
+import statisticalData from './datadase/statistical-data.json'; //database for Statistic
+
+import friendsData from './datadase/friends.json'; //database for FriendList
+
+import transactions from './datadase/transactions.json'; //database for Transaction
 
 const App = () => {
   return (
@@ -34,14 +35,11 @@ const App = () => {
         tag={userData.tag}
         location={userData.location}
         avatar={userData.avatar}
-        // stats={userData.stats}
-        followers={userData.stats.followers}
-        views={userData.stats.views}
-        likes={userData.stats.likes}
+        stats={userData.stats}
       />
       {/* 2. рендерим и вставляем часть кода из components/Statistics/Statistics.js */}
       <Statistics title="Upload stats" stats={statisticalData} />
-      {/* <Statistics stats={statisticalData} /> */}
+      <Statistics stats={statisticalData} />
       {/* 3.  рендерим и вставляем часть кода из components/FriendList/FriendList.js */}
       <FriendList friendsData={friendsData} />
 
