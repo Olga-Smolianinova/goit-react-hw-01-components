@@ -5,17 +5,13 @@
 import React from 'react'; //обзятельно import React  в каждый файл, чтобы использовать JSX и он мог  скомпилироваться и транспайлиться
 
 // Components
-// 1. Profile
-import Profile from './components/Profile/Profile';
+import Profile from './components/Profile/Profile'; // 1. Profile
 
-//2. Statistics
-import Statistics from './components/Statistics/Statistics';
+import Statistics from './components/Statistics/Statistics'; //2. Statistics
 
-//3. FriendList
-import FriendList from './components/FriendList/FriendList';
+import FriendList from './components/FriendList/FriendList'; //3. FriendList
 
-// 4. TransactionHistory
-import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory'; // 4. TransactionHistory
 
 // Styles
 import userData from './datadase/user.json'; //database for user
